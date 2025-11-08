@@ -53,22 +53,28 @@ header {
 }
 
 /* Menú */
-/* ===== INICIO BLOQUE MENÚ RESPONSIVE ===== */
-
-/* Menú estilo base */
 nav a {
     margin-left: 1.5rem;
     text-decoration: none;
     color: #333;
     font-size: 0.95rem;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s;
 }
 
-nav a:hover,
-nav a.activo {
-    color: #000;
-    font-weight: 500;
+nav a:hover {
+    transform: scale(1.05);
+    color: #dacca0;
 }
+
+nav a.activo {
+    color: #dacca0;
+    font-weight: 600;
+    border-bottom: 2px solid #dacca0;
+    padding-bottom: 2px;
+}
+
+/* Menú responsive */
 @media (max-width: 768px) {
     .contenedor-header {
         flex-direction: column;
@@ -84,6 +90,7 @@ nav a.activo {
         display: inline-block;
     }
 }
+
 /* ====== HERO ====== */
 .hero {
     text-align: center;
@@ -107,11 +114,12 @@ nav a.activo {
     padding: 0.8rem 2rem;
     text-decoration: none;
     border-radius: 5px;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    opacity: 0.8;
+    background-color: #222;
+    transform: scale(1.05);
 }
 
 /* ====== PRODUCTOS ====== */
@@ -128,6 +136,15 @@ nav a.activo {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+}
+
+.item {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .item img {
@@ -172,12 +189,15 @@ button {
     padding: 0.8rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 button:hover {
     opacity: 0.8;
+    transform: scale(1.05);
 }
 
+/* Redes sociales */
 .redes {
     margin-top: 2rem;
 }
@@ -187,6 +207,12 @@ button:hover {
     font-size: 1.5rem;
     color: #000;
     text-decoration: none;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.redes a:hover {
+    transform: scale(1.2);
+    color: #dacca0;
 }
 
 /* ====== FOOTER ====== */
