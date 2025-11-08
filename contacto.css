@@ -1,12 +1,12 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background-color: #f5f3ed;
+    background-color: #f5f3ed; /* fondo hueso */
     color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .info-contacto {
@@ -14,7 +14,7 @@ body {
     background-color: #fff;
     border-radius: 20px;
     padding: 3rem 2rem;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.1);
     width: 90%;
     max-width: 420px;
 }
@@ -53,13 +53,42 @@ body {
     background-color: #333;
 }
 
-/* Responsivo */
+/* ICONOS EN CONTACTO.HTML */
+.contacto .redes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.contacto .icono {
+    font-size: 3.5rem;
+    color: #222;
+    transition: all 0.3s ease;
+}
+
+.contacto .icono:hover {
+    transform: scale(1.15);
+    color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .info-contacto {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
 @media (max-width: 600px) {
     .info-contacto {
-        padding: 2rem 1.5rem;
+        width: 95%;
+        padding: 2rem 1rem;
     }
 
     .info-contacto i {
         font-size: 3rem;
+    }
+
+    .contacto .icono {
+        font-size: 2.5rem;
     }
 }
