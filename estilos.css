@@ -22,12 +22,12 @@ header {
 
 .logo img {
     height: 120px;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
 }
 
 nav a {
     text-decoration: none;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     color: #222;
     font-weight: 500;
 }
@@ -68,7 +68,7 @@ nav a.activo {
 /* GALERÍA DE PRODUCTOS */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     padding: 2rem;
 }
