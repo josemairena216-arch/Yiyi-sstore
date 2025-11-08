@@ -1,174 +1,149 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
+/* ===== ESTILOS GENERALES ===== */
 
 body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
     background-color: #fff;
-    color: #333;
-}
-
-/* ====== HEADER ====== */
-header {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #ddd;
-    padding: 0.8rem 5%;
-}
-
-.contenedor-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Logo + texto */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo img {
-    height: 120px;
-    width: auto;
-}
-
-.logo span {
-    font-size: 1.4rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
     color: #222;
 }
 
-/* Menú */
-nav a {
-    margin-left: 1.5rem;
-    text-decoration: none;
-    color: #333;
-    font-size: 0.95rem;
-    transition: color 0.3s;
+/* HEADER */
+header {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-nav a:hover,
-nav a.activo {
-    color: #000;
+.contenedor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 1rem;
+    color: #222;
     font-weight: 500;
 }
 
-/* ====== HERO ====== */
+nav a.activo {
+    color: #000;
+}
+
+/* HERO / INICIO */
 .hero {
     text-align: center;
-    padding: 5rem 1rem;
-    background-color: #fafafa;
+    padding: 4rem 2rem;
 }
 
 .hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .hero p {
-    color: #555;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
 }
 
 .btn {
-    background-color: #000;
-    color: #dacca0;
     padding: 0.8rem 2rem;
+    background-color: #000;
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
-    transition: opacity 0.3s;
+    border-radius: 30px;
+    transition: background 0.3s;
 }
 
 .btn:hover {
-    opacity: 0.8;
+    background-color: #333;
 }
 
-/* ====== PRODUCTOS ====== */
-.productos {
-    text-align: center;
-    padding: 3rem 5%;
-}
-
-.productos h2 {
-    margin-bottom: 2rem;
-}
-
+/* GALERÍA DE PRODUCTOS */
 .galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    padding: 2rem;
 }
 
-.item img {
-    width: 65%;
-    border-radius: 10px;
-}
-
-.item h3 {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-}
-
-.item p {
-    color: #666;
-}
-
-/* ====== CONTACTO ====== */
-.contacto {
+.producto {
     text-align: center;
-    padding: 3rem 5%;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 
-form {
-    max-width: 500px;
-    margin: 2rem auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
 }
 
-input, textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-
-button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 0.8rem;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-.redes {
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f5f5f5;
+    color: #555;
     margin-top: 2rem;
 }
 
-.redes a {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: #000;
-    text-decoration: none;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.7rem 1.8rem;
+    }
 }
 
-/* ====== FOOTER ====== */
-footer {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: #f9f9f9;
-    margin-top: 3rem;
-    font-size: 0.9rem;
+@media (max-width: 768px) {
+    .contenedor-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 0.5rem;
+    }
+
+    nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .galeria {
+        gap: 1rem;
+        padding: 1rem;
+    }
 }
