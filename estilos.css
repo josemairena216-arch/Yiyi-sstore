@@ -148,8 +148,12 @@ nav a.activo {
 }
 
 .item img {
-    width: 65%;
+    width: 100%;
+    height: 250px;              /* alto uniforme para todas las imágenes */
+    object-fit: contain;        /* muestra toda la imagen sin recortarla */
     border-radius: 10px;
+    background-color: #f8f8f8;  /* fondo neutro para imágenes más pequeñas */
+    padding: 5px;               /* espacio interno para mantener proporción */
 }
 
 .item h3 {
@@ -223,3 +227,4 @@ footer {
     margin-top: 3rem;
     font-size: 0.9rem;
 }
+
