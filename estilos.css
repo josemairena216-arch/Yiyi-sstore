@@ -149,12 +149,11 @@ nav a.activo {
 
 /* AJUSTE DE IMÁGENES PARA PRODUCTOS */
 .item img {
-    width: 100%;                /* ocupa todo el ancho de su contenedor */
-    height: 200px;              /* alto uniforme para todas las imágenes */
-    object-fit: contain;        /* mantiene la proporción y se ve completa */
+    width: 100%;
+    height: auto; /* ajusta la altura según la proporción */
+    max-height: 250px; /* opcional: no exceder cierto tamaño */
+    object-fit: contain; 
     border-radius: 10px;
-    background-color: #f8f8f8;  /* fondo neutro para imágenes más pequeñas */
-    padding: 5px;               /* espacio interno para mantener proporción */
 }
 
 .item h3 {
