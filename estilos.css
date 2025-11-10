@@ -147,10 +147,11 @@ nav a.activo {
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+/* AJUSTE DE IMÁGENES PARA PRODUCTOS */
 .item img {
-    width: 100%;
+    width: 100%;                /* ocupa todo el ancho de su contenedor */
     height: 250px;              /* alto uniforme para todas las imágenes */
-    object-fit: contain;        /* muestra toda la imagen sin recortarla */
+    object-fit: contain;        /* mantiene la proporción y se ve completa */
     border-radius: 10px;
     background-color: #f8f8f8;  /* fondo neutro para imágenes más pequeñas */
     padding: 5px;               /* espacio interno para mantener proporción */
@@ -161,7 +162,7 @@ nav a.activo {
     font-size: 1.1rem;
 }
 
-.item p {
+.item p, .item h4 {
     color: #666;
 }
 
